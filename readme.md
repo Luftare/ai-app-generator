@@ -2,6 +2,11 @@
 
 It generates apps with OpenAI API.
 
+## Prerequisites
+
+1. Node 18.0+
+2. OpenAI API access
+
 ## How to setup
 
 1. Create new .env file in the root
