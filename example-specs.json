@@ -1,0 +1,12 @@
+{
+    "description": "Counter App",
+    "features": [
+        "As a user, I can see the current number, defaulting to 0",
+        "As a user, I can increment the number",
+        "As a user, I can reset the number to 0"
+    ],
+    "technologies": [
+        "html5",
+        "ES6"
+    ]
+}
