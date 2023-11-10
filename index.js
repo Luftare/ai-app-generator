@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const fs = require("fs");
 
 const specs = require("./specs.json");
 
@@ -19,7 +20,12 @@ const { prompt } = require("./prompt");
   console.log("Processing the response...");
   const appFiles = parseAppFiles(encodedAppFiles);
   const uuid = crypto.randomUUID();
-  const outputDirectory = `./output/${uuid}`;
+  const outputRootDirectory = "./output";
+  const outputDirectory = `${outputRootDirectory}/${uuid}`;
+
+  if (!fs.existsSync(outputRootDirectory)) {
+    fs.mkdirSync(outputRootDirectory);
+  }
 
   console.log("Copying specs file...");
   writeAppFilesTo(
